@@ -52,6 +52,9 @@ namespace PilhaTraining
                     case 2:
                         pilha.Print();
                         break;
+                    case 3:
+                        pilha.Pop();
+                        break;
                     default:
                         Console.WriteLine("Escolha uma opção válida!!");
                         break;
