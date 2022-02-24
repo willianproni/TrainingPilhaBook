@@ -30,14 +30,14 @@ namespace PilhaTraining
 
             void Menu()
             {
-                Console.WriteLine("------------Menu-------------\n" +
+                Console.WriteLine("------------Menu-------------\n\n" +
                                     "[1] - Adicionar Livro\n" +
                                     "[2] - Imprimir livro\n" +
                                     "[3] - Remover livro\n" +
                                     "[4] - Buscar Livro\n");
                 Console.WriteLine("------------------------------");
                 Console.Write("Opção: ");
-            }   
+            }
 
             do
             {
@@ -55,8 +55,14 @@ namespace PilhaTraining
                     case 3:
                         pilha.Pop();
                         break;
+                    case 4:
+                        pilha.Seach();
+                        break;
                     default:
-                        Console.WriteLine("Escolha uma opção válida!!");
+                        Console.Clear();
+                        Console.WriteLine("----------------------------\nEscolha uma opção válida!!\n----------------------------");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             } while (true);
