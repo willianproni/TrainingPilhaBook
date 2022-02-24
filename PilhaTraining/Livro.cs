@@ -27,10 +27,12 @@ namespace PilhaTraining
 
         public override string ToString()
         {
-            return "Título:" + Titulo +
-                    "\nAutor:" + Autor +
-                    "\nPáginas:" + Paginas +
-                    "\nAno: " + AnoPublicacao;
+            return "\n***************************" +
+                "\n\tTítulo:" + Titulo +
+                    "\n\tAutor:" + Autor +
+                    "\n\tPáginas:" + Paginas +
+                    "\n\tAno: " + AnoPublicacao +
+                    "\n***************************";
         }
     }
 }

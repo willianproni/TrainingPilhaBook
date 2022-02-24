@@ -41,9 +41,13 @@ namespace PilhaTraining
 
         public void Print()
         {
+            Console.Clear();
+            Console.WriteLine("------------Mostrar Livros----------------");
             if (Vazio())
             {
                 Console.WriteLine("Nenhum Livro Adicionado");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
@@ -53,14 +57,20 @@ namespace PilhaTraining
                     Console.WriteLine(imprimir.ToString());
                     imprimir = imprimir.Anterior;
                 } while (imprimir != null);
+                Console.ReadKey();
+                Console.Clear();
             }
         }
 
         public void Pop()
         {
+            Console.Clear();
+            Console.WriteLine("------------Remover Livro----------------");
             if (Vazio())
             {
                 Console.WriteLine("Nenhum Livro Adicionado");
+                Console.ReadKey();
+                Console.Clear();
             }
             else
             {
@@ -71,7 +81,34 @@ namespace PilhaTraining
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+        public void Seach()
+        {
+            Console.Clear();
+            Console.WriteLine("-----------Buscar Livro-------------\n");
+            if (Vazio())
+            {
 
+                Console.WriteLine("Nenhum Livro Adicionado");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else
+            {
+                Console.Write("Digite o nome do Livro que deseja Buscar:");
+                string busca = Console.ReadLine();
+                Livro livro = Topo;
+                do
+                {
+                    if (busca.CompareTo(livro.Titulo) == 0)
+                    {
+                        Console.WriteLine(livro.ToString());
+                    }
+                    livro = livro.Anterior;
+                } while (livro != null);
+                Console.ReadKey();
+                Console.Clear();
+            }
         }
     }
 }
